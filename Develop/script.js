@@ -13,11 +13,11 @@ let passwordLength;
 
 function setPasswordLength() {
 
-  passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
+  let passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
 
   while (passwordLength < 8 || passwordLength > 128) {
-    let passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
-    passwordLength = alert("please pick a valid password length between 8 and 128 characters");
+    alert("please pick a valid password length between 8 and 128 characters");
+    passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
   };
 };
 
