@@ -13,13 +13,14 @@ let passwordLength;
 
 function setPasswordLength() {
 
-  let passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
+  passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
 
   while (passwordLength < 8 || passwordLength > 128) {
     alert("please pick a valid password length between 8 and 128 characters");
     passwordLength = parseInt(prompt("Pick a password length between 8 and 128 characters."));
-  };
-};
+  }
+    console.log(passwordLength);
+}
 
 function defineCharacterTypes() {
   passwordOptions = [];
@@ -80,7 +81,7 @@ function writePassword () {
   defineCharacterTypes();
   for (let i = 0; i < passwordLength; i++) {
     shuffle(passwordOptions);
-    passwordDisplay.innerHTML = passwordDisplay.value + passwordOptions[0];
+    passwordDisplay.innerHTML = passwordDisplay.value + passwordOptions[1];
   };
 };
 
